@@ -1,13 +1,23 @@
-import React from 'react';
+import React from "react";
 import {
   AiFillGithub,
   AiFillSkype,
   AiFillLinkedin,
   AiFillPhone,
 } from "react-icons/ai";
-import { Link } from '../../styles/GlobalComponents';
-import { SocialIcons } from '../Header/HeaderStyles';
-import { CompanyContainer, FooterWrapper, LinkColumn, LinkItem, LinkList, LinkTitle, Slogan, SocialContainer, SocialIconsContainer } from './FooterStyles';
+import { Link } from "../../styles/GlobalComponents";
+import { SocialIcons } from "../Header/HeaderStyles";
+import {
+  CompanyContainer,
+  FooterWrapper,
+  LinkColumn,
+  LinkItem,
+  LinkList,
+  LinkTitle,
+  Slogan,
+  SocialContainer,
+  SocialIconsContainer,
+} from "./FooterStyles";
 
 const Footer = () => {
   return (
@@ -38,7 +48,7 @@ const Footer = () => {
           <SocialIcons href="Yazan Hasan">
             <AiFillSkype size="3rem" />
           </SocialIcons>
-          <SocialIcons href="+963951602419">
+          <SocialIcons href="+971501733078">
             <AiFillPhone size="3rem" />
           </SocialIcons>
         </SocialContainer>

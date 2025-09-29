@@ -1,12 +1,19 @@
-import Link from 'next/link';
-import React from 'react';
+import Link from "next/link";
+import React from "react";
 import {
   AiFillGithub,
   AiFillSkype,
   AiFillLinkedin,
   AiFillPhone,
 } from "react-icons/ai";
-import { Container, Div1, Div2, Div3, NavLink, SocialIcons } from './HeaderStyles';
+import {
+  Container,
+  Div1,
+  Div2,
+  Div3,
+  NavLink,
+  SocialIcons,
+} from "./HeaderStyles";
 
 const Header = () => (
   <Container>
@@ -15,15 +22,15 @@ const Header = () => (
         <a style={{ display: "flex", alignItems: "center", color: "white" }}>
           <img src="/logo.svg" height={40} width={40} />{" "}
           <span style={{ marginLeft: 10, marginTop: 7, fontSize: 20 }}>
-           Yazan Hasan
+            Yazan Hasan
           </span>
         </a>
       </Link>
     </Div1>
     <Div2>
       <li>
-        <Link href="#projects">
-          <NavLink>Projects</NavLink>
+        <Link href="#about">
+          <NavLink>About</NavLink>
         </Link>
       </li>
       <li>
@@ -32,11 +39,15 @@ const Header = () => (
         </Link>
       </li>
       <li>
-        <Link href="#about">
-          <NavLink>About</NavLink>
+        <Link href="#experience">
+          <NavLink>Experience</NavLink>
         </Link>
       </li>
-     
+      <li>
+        <Link href="#projects">
+          <NavLink>Projects</NavLink>
+        </Link>
+      </li>
     </Div2>
     <Div3>
       <SocialIcons href="https://github.com/yazan837">
@@ -48,7 +59,7 @@ const Header = () => (
       <SocialIcons href="Yazan Hasan">
         <AiFillSkype size="3rem" />
       </SocialIcons>
-      <SocialIcons href="+963951602419">
+      <SocialIcons href="+971501733078">
         <AiFillPhone size="3rem" />
       </SocialIcons>
     </Div3>
