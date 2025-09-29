@@ -5,6 +5,18 @@ export const SkillsContainer = styled.div`
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: ${(props) => props.theme.spacing["2xl"]};
   margin-top: ${(props) => props.theme.spacing["3xl"]};
+  animation: fadeInUp 1s ease-out;
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 
   @media ${(props) => props.theme.breakpoints.lg} {
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -25,6 +37,9 @@ export const SkillCategory = styled.div`
   transition: all ${(props) => props.theme.transitions.normal};
   position: relative;
   overflow: hidden;
+  animation: fadeInUp 1s ease-out;
+  animation-delay: ${(props) => props.index * 0.2}s;
+  animation-fill-mode: both;
 
   &::before {
     content: "";
@@ -36,10 +51,28 @@ export const SkillCategory = styled.div`
     background: ${(props) => props.theme.colors.gradient1};
   }
 
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: ${(props) => props.theme.colors.gradient1};
+    opacity: 0;
+    transition: opacity ${(props) => props.theme.transitions.normal};
+    border-radius: ${(props) => props.theme.borderRadius.xl};
+  }
+
   &:hover {
-    transform: translateY(-4px);
-    box-shadow: ${(props) => props.theme.shadows.xl};
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: ${(props) => props.theme.shadows.xl},
+      ${(props) => props.theme.shadows.glow};
     border-color: ${(props) => props.theme.colors.accent1};
+
+    &::after {
+      opacity: 0.05;
+    }
   }
 
   @media ${(props) => props.theme.breakpoints.sm} {

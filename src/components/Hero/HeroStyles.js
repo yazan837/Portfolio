@@ -39,12 +39,37 @@ export const HeroTitle = styled.h1`
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  animation: fadeInUp 1s ease-out;
+  position: relative;
 
   span {
     background: ${(props) => props.theme.colors.gradient2};
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    position: relative;
+    animation: glow 2s ease-in-out infinite alternate;
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes glow {
+    from {
+      text-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+    }
+    to {
+      text-shadow: 0 0 30px rgba(59, 130, 246, 0.6),
+        0 0 40px rgba(139, 92, 246, 0.3);
+    }
   }
 
   @media ${(props) => props.theme.breakpoints.lg} {
@@ -71,10 +96,38 @@ export const HeroSubtitle = styled.h2`
   color: ${(props) => props.theme.colors.text2};
   margin-bottom: ${(props) => props.theme.spacing.lg};
   line-height: 1.3;
+  animation: fadeInUp 1s ease-out 0.2s both;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background: ${(props) => props.theme.colors.gradient1};
+    border-radius: ${(props) => props.theme.borderRadius.full};
+    animation: slideIn 1s ease-out 0.8s both;
+  }
+
+  @keyframes slideIn {
+    from {
+      width: 0;
+    }
+    to {
+      width: 60px;
+    }
+  }
 
   @media ${(props) => props.theme.breakpoints.md} {
     font-size: 2rem;
     text-align: center;
+
+    &::after {
+      left: 50%;
+      transform: translateX(-50%);
+    }
   }
 
   @media ${(props) => props.theme.breakpoints.sm} {
@@ -88,6 +141,8 @@ export const HeroDescription = styled.p`
   color: ${(props) => props.theme.colors.text3};
   margin-bottom: ${(props) => props.theme.spacing["3xl"]};
   max-width: 600px;
+  animation: fadeInUp 1s ease-out 0.4s both;
+  position: relative;
 
   @media ${(props) => props.theme.breakpoints.md} {
     font-size: 1.6rem;
@@ -106,6 +161,7 @@ export const HeroButtons = styled.div`
   gap: ${(props) => props.theme.spacing.lg};
   margin-bottom: ${(props) => props.theme.spacing["3xl"]};
   flex-wrap: wrap;
+  animation: fadeInUp 1s ease-out 0.6s both;
 
   @media ${(props) => props.theme.breakpoints.md} {
     justify-content: center;
@@ -123,6 +179,7 @@ export const SocialLinks = styled.div`
   display: flex;
   gap: ${(props) => props.theme.spacing.lg};
   align-items: center;
+  animation: fadeInUp 1s ease-out 0.8s both;
 
   @media ${(props) => props.theme.breakpoints.md} {
     justify-content: center;

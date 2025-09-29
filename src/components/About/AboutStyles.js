@@ -6,6 +6,18 @@ export const AboutContainer = styled.div`
   gap: ${(props) => props.theme.spacing["4xl"]};
   align-items: center;
   margin-top: ${(props) => props.theme.spacing["3xl"]};
+  animation: fadeInUp 1s ease-out;
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 
   @media ${(props) => props.theme.breakpoints.lg} {
     gap: ${(props) => props.theme.spacing["3xl"]};
@@ -62,6 +74,20 @@ export const AboutStats = styled.div`
   background: ${(props) => props.theme.colors.background2};
   border-radius: ${(props) => props.theme.borderRadius.xl};
   border: 1px solid ${(props) => props.theme.colors.border};
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: ${(props) => props.theme.colors.gradient1};
+    opacity: 0.05;
+    border-radius: ${(props) => props.theme.borderRadius.xl};
+  }
 
   @media ${(props) => props.theme.breakpoints.md} {
     grid-template-columns: repeat(4, 1fr);
@@ -84,6 +110,9 @@ export const StatItem = styled.div`
   transition: all ${(props) => props.theme.transitions.normal};
   position: relative;
   overflow: hidden;
+  animation: fadeInUp 1s ease-out;
+  animation-delay: ${(props) => props.index * 0.1}s;
+  animation-fill-mode: both;
 
   &::before {
     content: "";
@@ -97,13 +126,31 @@ export const StatItem = styled.div`
     transition: all ${(props) => props.theme.transitions.normal};
   }
 
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: ${(props) => props.theme.colors.gradient1};
+    opacity: 0;
+    border-radius: ${(props) => props.theme.borderRadius.lg};
+    transition: opacity ${(props) => props.theme.transitions.normal};
+  }
+
   &:hover {
-    transform: translateY(-4px);
-    box-shadow: ${(props) => props.theme.shadows.lg};
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: ${(props) => props.theme.shadows.xl},
+      ${(props) => props.theme.shadows.glow};
 
     &::before {
       left: 0;
       opacity: 0.1;
+    }
+
+    &::after {
+      opacity: 0.05;
     }
   }
 

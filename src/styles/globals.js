@@ -7,6 +7,7 @@ const GlobalStyles = createGlobalStyle`
   /* Import modern fonts */
   @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
   @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
 
   * {
     box-sizing: border-box;
@@ -25,6 +26,7 @@ const GlobalStyles = createGlobalStyle`
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
+    scroll-padding-top: 80px;
   }
 
   body {
@@ -37,6 +39,22 @@ const GlobalStyles = createGlobalStyle`
     cursor: default;
     overflow-x: hidden;
     transition: all ${(props) => props.theme.transitions.normal};
+    position: relative;
+  }
+
+  /* Add subtle background pattern */
+  body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+      radial-gradient(circle at 25% 25%, rgba(59, 130, 246, 0.1) 0%, transparent 50%),
+      radial-gradient(circle at 75% 75%, rgba(139, 92, 246, 0.1) 0%, transparent 50%);
+    pointer-events: none;
+    z-index: -1;
   }
 
   /* Enhanced typography */
@@ -154,6 +172,33 @@ const GlobalStyles = createGlobalStyle`
       animation-iteration-count: 1 !important;
       transition-duration: 0.01ms !important;
       scroll-behavior: auto !important;
+    }
+  }
+
+  /* Enhanced mobile experience */
+  @media ${(props) => props.theme.breakpoints.sm} {
+    body {
+      font-size: 1.4rem;
+    }
+    
+    h1 {
+      font-size: 3.6rem;
+    }
+    
+    h2 {
+      font-size: 2.8rem;
+    }
+    
+    h3 {
+      font-size: 2.2rem;
+    }
+  }
+
+  /* Touch device optimizations */
+  @media (hover: none) and (pointer: coarse) {
+    button, a {
+      min-height: 44px;
+      min-width: 44px;
     }
   }
 

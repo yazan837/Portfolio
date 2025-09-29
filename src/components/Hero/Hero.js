@@ -27,12 +27,16 @@ const Hero = (props) => (
           <HeroTitle>
             Hello, I'm <span>Yazan Hasan</span>
           </HeroTitle>
-          <HeroSubtitle>Full-Stack Mobile & Web Developer</HeroSubtitle>
+          <HeroSubtitle>
+            Senior Software Engineer & Technical Leader
+          </HeroSubtitle>
           <HeroDescription>
-            I'm a passionate React Native and React.js developer with expertise
-            in building scalable mobile applications and modern web solutions. I
-            specialize in creating user-friendly interfaces and robust backend
-            systems that deliver exceptional user experiences.
+            With over 8+ years of prolific experience as a Software Engineer, I
+            have consistently played pivotal leadership roles, steering
+            companies toward unparalleled success through innovative strategies
+            and technical prowess. I specialize in creating collaborative work
+            cultures, mentoring teams, and delivering scalable solutions that
+            drive business growth.
           </HeroDescription>
 
           <HeroButtons>

@@ -267,23 +267,42 @@ export const ButtonBack = styled.div`
     background: linear-gradient(
       90deg,
       transparent,
-      rgba(255, 255, 255, 0.2),
+      rgba(255, 255, 255, 0.3),
       transparent
     );
     transition: left ${({ theme }) => theme.transitions.slow};
   }
 
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: all ${({ theme }) => theme.transitions.normal};
+  }
+
   &:hover {
-    transform: translateY(-2px);
-    box-shadow: ${({ theme }) => theme.shadows.xl};
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: ${({ theme }) => theme.shadows.xl},
+      ${({ theme }) => theme.shadows.glow};
 
     &::before {
       left: 100%;
     }
+
+    &::after {
+      width: 300px;
+      height: 300px;
+    }
   }
 
   &:active {
-    transform: translateY(0);
+    transform: translateY(-1px) scale(0.98);
     box-shadow: ${({ theme }) => theme.shadows.md};
   }
 

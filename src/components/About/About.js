@@ -23,41 +23,50 @@ const About = () => (
       <AboutContent>
         <AboutText>
           <p>
-            I'm a passionate full-stack developer with over 8 years of
-            experience in building scalable mobile and web applications. My
-            journey began with a fascination for mobile development, and I've
-            since expanded my expertise to include modern web technologies and
-            cloud platforms.
+            With over 8+ years of prolific experience as a Software Engineer, I
+            have consistently played pivotal leadership roles, steering
+            companies toward unparalleled success through innovative strategies
+            and technical prowess. My journey is marked by a series of impactful
+            contributions to diverse projects and organizations, where I've not
+            only showcased technical excellence but also provided strategic
+            guidance to foster growth.
           </p>
           <p>
-            I specialize in React Native and React.js development, with a strong
-            focus on creating user-friendly interfaces and robust backend
-            systems. My experience spans from startup environments to
-            enterprise-level applications, where I've led teams and delivered
-            projects that have reached thousands of users.
+            My leadership extends beyond coding; I actively collaborate with
+            cross-functional teams, aligning technical initiatives with
+            overarching business objectives. Throughout my career, I have been a
+            catalyst for success, leveraging my expertise to navigate complex
+            challenges and optimize software solutions. My ability to envision
+            and implement scalable architectures has significantly contributed
+            to the efficiency and competitiveness of the companies I've been a
+            part of.
           </p>
           <p>
-            When I'm not coding, you can find me exploring new technologies,
-            contributing to open-source projects, or sharing knowledge with the
-            developer community. I believe in continuous learning and staying
-            up-to-date with the latest industry trends and best practices.
+            In addition to technical acumen, I specialize in creating a
+            collaborative and empowering work culture. I have successfully
+            mentored and led teams, nurturing talent and fostering an
+            environment of continuous learning. My leadership style emphasizes
+            transparency, open communication, and a results-driven mindset. As a
+            seasoned Software Engineer, I bring not just technical skills but a
+            holistic understanding of the intersection between technology and
+            business.
           </p>
         </AboutText>
 
         <AboutStats>
-          <StatItem>
+          <StatItem index={0}>
             <StatNumber>8+</StatNumber>
             <StatLabel>Years Experience</StatLabel>
           </StatItem>
-          <StatItem>
+          <StatItem index={1}>
             <StatNumber>20+</StatNumber>
             <StatLabel>Projects Completed</StatLabel>
           </StatItem>
-          <StatItem>
+          <StatItem index={2}>
             <StatNumber>50k+</StatNumber>
             <StatLabel>App Downloads</StatLabel>
           </StatItem>
-          <StatItem>
+          <StatItem index={3}>
             <StatNumber>10+</StatNumber>
             <StatLabel>Technologies</StatLabel>
           </StatItem>

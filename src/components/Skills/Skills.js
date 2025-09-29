@@ -14,7 +14,7 @@ const Skills = () => (
     <SectionTitle>Skills & Technologies</SectionTitle>
     <SkillsContainer>
       {skills.map((category, index) => (
-        <SkillCategory key={index}>
+        <SkillCategory key={index} index={index}>
           <SkillTitle>{category.title}</SkillTitle>
           <SkillList>
             {category.skills.map((skill, skillIndex) => (

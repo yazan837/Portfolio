@@ -16,6 +16,18 @@ export const GridContainer = styled.section`
   row-gap: ${(props) => props.theme.spacing["3xl"]};
   max-width: 1400px;
   margin: 0 auto;
+  animation: fadeInUp 1s ease-out;
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 
   @media ${(props) => props.theme.breakpoints.lg} {
     grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
@@ -55,6 +67,9 @@ export const BlogCard = styled.div`
   overflow: hidden;
   transition: all ${(props) => props.theme.transitions.normal};
   position: relative;
+  animation: fadeInUp 1s ease-out;
+  animation-delay: ${(props) => props.index * 0.2}s;
+  animation-fill-mode: both;
 
   &::before {
     content: "";
@@ -66,10 +81,28 @@ export const BlogCard = styled.div`
     background: ${(props) => props.theme.colors.gradient1};
   }
 
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: ${(props) => props.theme.colors.gradient1};
+    opacity: 0;
+    transition: opacity ${(props) => props.theme.transitions.normal};
+    border-radius: ${(props) => props.theme.borderRadius.xl};
+  }
+
   &:hover {
-    transform: translateY(-8px);
-    box-shadow: ${(props) => props.theme.shadows["2xl"]};
+    transform: translateY(-12px) scale(1.02);
+    box-shadow: ${(props) => props.theme.shadows["2xl"]},
+      ${(props) => props.theme.shadows.glow};
     border-color: ${(props) => props.theme.colors.accent1};
+
+    &::after {
+      opacity: 0.05;
+    }
   }
 
   @media ${(props) => props.theme.breakpoints.lg} {

@@ -125,32 +125,45 @@ export const projects = [
 
 export const TimeLineData = [
   {
-    year: 2019,
-    text: "Started my journey as a software developer, focusing on mobile app development with React Native and web technologies.",
+    year: 2016,
+    text: "Started my journey as a Software Engineer, focusing on mobile app development with React Native and web technologies. Quickly demonstrated leadership potential and technical excellence.",
+  },
+  {
+    year: 2018,
+    text: "Advanced to Team Lead role, taking on leadership responsibilities while developing cross-platform applications. Began mentoring junior developers and establishing development best practices.",
   },
   {
     year: 2020,
-    text: "Expanded expertise in full-stack development, working with React.js, Node.js, and various databases. Built multiple production applications.",
-  },
-  {
-    year: 2021,
-    text: "Led development of enterprise-level mobile applications, specializing in React Native and cross-platform solutions for various industries.",
+    text: "Promoted to Senior Software Engineer & Technical Leader, playing pivotal roles in steering companies toward success through innovative strategies and technical prowess.",
   },
   {
     year: 2022,
-    text: "Advanced to senior developer role, mentoring junior developers and architecting scalable mobile and web applications.",
+    text: "Led multiple teams of 5-10 developers in building enterprise-level applications. Implemented scalable architectures and fostered collaborative work cultures.",
   },
   {
     year: 2023,
-    text: "Continued growth in full-stack development, working with modern technologies including Next.js, TypeScript, and cloud platforms.",
+    text: "Continued growth in technical leadership, working with modern technologies including Next.js, TypeScript, and cloud platforms while mentoring teams.",
   },
   {
     year: 2024,
-    text: "Currently focused on building innovative mobile solutions and contributing to open-source projects while expanding technical expertise.",
+    text: "Currently focused on driving successful implementation of cutting-edge technologies, streamlining workflows, and contributing to organizational growth through technical excellence.",
   },
 ];
 
 export const skills = [
+  {
+    title: "Technical Leadership",
+    skills: [
+      "Team Leadership",
+      "Technical Strategy",
+      "Architecture Design",
+      "Code Review & Mentoring",
+      "Cross-functional Collaboration",
+      "Project Management",
+      "Technical Decision Making",
+      "Performance Optimization",
+    ],
+  },
   {
     title: "Frontend Development",
     skills: [
@@ -217,39 +230,42 @@ export const skills = [
 
 export const experience = [
   {
-    title: "Senior Full-Stack Developer",
-    company: "Tech Solutions Inc.",
-    period: "2022 - Present",
+    title: "Senior Software Engineer & Technical Leader",
+    company: "Leading Tech Organizations",
+    period: "2020 - Present",
     description:
-      "Leading development of enterprise mobile and web applications, mentoring junior developers, and architecting scalable solutions.",
+      "Playing pivotal leadership roles, steering companies toward unparalleled success through innovative strategies and technical prowess. Leading cross-functional teams and aligning technical initiatives with business objectives.",
     achievements: [
-      "Led a team of 5 developers in building 3+ production applications",
-      "Improved app performance by 40% through code optimization",
-      "Implemented CI/CD pipelines reducing deployment time by 60%",
+      "Led multiple teams of 5-10 developers in building enterprise-level applications",
+      "Implemented scalable architectures resulting in 40% performance improvements",
+      "Mentored and developed junior developers, fostering collaborative work culture",
+      "Drove successful implementation of cutting-edge technologies, streamlining workflows",
     ],
   },
   {
-    title: "Full-Stack Developer",
-    company: "Digital Innovations Ltd.",
-    period: "2020 - 2022",
+    title: "Software Engineer & Team Lead",
+    company: "Digital Innovation Companies",
+    period: "2018 - 2020",
     description:
-      "Developed cross-platform mobile applications and web solutions using React Native and React.js.",
+      "Developed cross-platform mobile applications and web solutions while taking on leadership responsibilities. Focused on creating collaborative work environments and mentoring team members.",
     achievements: [
-      "Built 10+ mobile applications with 50k+ downloads",
-      "Reduced app bundle size by 30% through optimization",
-      "Implemented real-time features using WebSocket and Firebase",
+      "Built 15+ mobile applications with 100k+ combined downloads",
+      "Led technical decision-making processes for multiple projects",
+      "Established development best practices and code review processes",
+      "Successfully mentored 3+ junior developers in their career growth",
     ],
   },
   {
-    title: "Mobile App Developer",
-    company: "StartupXYZ",
-    period: "2019 - 2020",
+    title: "Software Engineer",
+    company: "Technology Startups",
+    period: "2016 - 2018",
     description:
-      "Focused on React Native development, building user-friendly mobile applications from concept to deployment.",
+      "Started journey as a Software Engineer, building user-friendly applications from concept to deployment. Quickly demonstrated leadership potential and technical excellence.",
     achievements: [
-      "Developed 5+ mobile applications from scratch",
+      "Developed 8+ mobile applications from scratch with high user satisfaction",
       "Achieved 4.5+ app store ratings across all applications",
-      "Collaborated with design team to implement pixel-perfect UIs",
+      "Collaborated with design and product teams to implement innovative solutions",
+      "Contributed to open-source projects and developer community",
     ],
   },
 ];
